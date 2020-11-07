@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ### Start the service
 ```
 
-python3 -m run.py
+python3 -m run
 ```
 
 The Flask server will be running on `http://127.0.0.1:5000`
