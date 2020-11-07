@@ -22,6 +22,7 @@ The Flask server will be running on `http://127.0.0.1:5000`
 
 ### Requests:
 
+Run `curl -i 'http://localhost:5000/profiles/<profile>'` where `profile` is the Bitbucket team or Github organization
 ```
 curl -i 'http://localhost:5000/health-check'
 curl -i 'http://localhost:5000/profiles/mailchimp'
@@ -30,5 +31,6 @@ curl -i 'http://localhost:5000/profiles/pygame'
 
 ### Testing
 Unit tests are written using `pytest` and can be found under `tests/`
+To run these test just run `pytest`
 The `test.py` script is the testing file used during development.
 Run `python3 test.py --help` if you're interested in using this test script.
