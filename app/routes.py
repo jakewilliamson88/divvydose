@@ -62,7 +62,7 @@ def profiles(profile):
 
     # Aggregate the original repo counts.
     bb_original = bb_repos.get('original', 0)
-    gh_original = 0
+    gh_original = gh_repos.get('original', 0)
     ag_original = bb_original+gh_original
 
     # Handle github topics.
