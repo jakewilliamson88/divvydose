@@ -17,63 +17,34 @@ URL = 'http://127.0.0.1:5000/'
 PROFILE = 'mailchimp'
 
 
-def timed(func: Callable) -> Callable:
-    """
-    Time function executions.
-    :param func: is the decorated function.
-    :return: function
-    """
-
-    def wrapped(*args: list, **kwargs: dict) -> Any:
-        """
-        The replacement for the decorated function.
-        :param args: list of args
-        :param kwargs: dict of keyword args.
-        :return: Any
-        """
-
-        # Record the start time.
-        start = time.time()
-
-        # Call the decorated function.
-        retval = func(*args, **kwargs)
-
-        # Report execution time.
-        print(" - {:.4f}s".format(time.time() - start))
-
-        return retval
-
-    return wrapped()
-
-
 def main(argv: list):
     # Create a command-line argument parser.
     parser = argparse.ArgumentParser(prog=argv[0], description=__doc__, add_help=False)
 
     # Optional arguments.
     optional = parser.add_argument_group(title="Optional Arguments")
-    optional.add_argument('-t', '--team', required=False, default=PROFILE, help="The team or organization to profile.")
+    optional.add_argument('-p', '--profile', required=False, default=PROFILE, help="The team or organization to profile.")
     optional.add_argument('-h', '--help', action='help', help="Show this help message and exit.")
 
     # Parse the command-line arguments.
     parsed = parser.parse_args(argv[1:])
-    team = parsed.team
+    profile = parsed.profile
 
     # Get the team profile.
-    profile = get_profile(team)
+    profile = get_profile(profile)
 
     pprint.pprint(profile)
 
 
-def get_profile(team: AnyStr) -> dict:
+def get_profile(profile: AnyStr) -> dict:
     """
     Get the profile for the team or organization.
-    :param team:
+    :param profile: is the team or organization to look up.
     :return:
     """
 
     # Build the URL for the request.
-    url = f'{URL}/profiles/{team}'
+    url = f'{URL}/profiles/{profile}'
 
     return requests.get(url).json()
 
