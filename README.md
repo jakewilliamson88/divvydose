@@ -19,7 +19,7 @@ python3 -m run
 
 The Flask server will be running on `http://127.0.0.1:5000`
 
-### Requests:
+### Requests
 
 Run `curl -i 'http://localhost:5000/profiles/<profile>'` where `profile` is the Bitbucket team or Github organization
 ```
