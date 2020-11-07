@@ -3,9 +3,8 @@
 ## Installation
 
 ```
-mkdir divvydose
-cd divvydose
 git clone https://github.com/jakewilliamson88/divvydose.git
+cd divvydose
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
