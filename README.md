@@ -14,7 +14,6 @@ pip install -r requirements.txt
 
 ### Start the service
 ```
-
 python3 -m run
 ```
 
