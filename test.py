@@ -23,7 +23,7 @@ def main(argv: list):
 
     # Optional arguments.
     optional = parser.add_argument_group(title="Optional Arguments")
-    optional.add_argument('-p', '--profile', required=False, default=PROFILE, help="The team or organization to profile.")
+    optional.add_argument('-p', '--profile', required=False, default=PROFILE, help="The team or organization or profile.")
     optional.add_argument('-h', '--help', action='help', help="Show this help message and exit.")
 
     # Parse the command-line arguments.
