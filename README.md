@@ -37,4 +37,4 @@ Run `python3 test.py --help` if you're interested in using this test script.
 ## What'd I'd like to improve on...
 I'd like to add retry logic for handling network errors. Ideally there would be a set number of retries and if all of them fail, a standard response should be returned indicating failure.
 This can probably be implemented using a decorator to make things simple.
-I would also like to write unit tests for network failrues to make sure the implementation works.
+I would also like to write unit tests for network failures to make sure the implementation works.
