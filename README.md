@@ -23,7 +23,6 @@ The Flask server will be running on `http://127.0.0.1:5000`
 
 Run `curl -i 'http://localhost:5000/profiles/<profile>'` where `profile` is the Bitbucket team or Github organization
 ```
-curl -i 'http://localhost:5000/health-check'
 curl -i 'http://localhost:5000/profiles/mailchimp'
 curl -i 'http://localhost:5000/profiles/pygame'
 ```
