@@ -14,7 +14,7 @@ from typing import Any, AnyStr, Callable
 URL = 'http://127.0.0.1:5000/'
 
 #: The default profile to check.
-PROFILE = 'mailchimp'
+PROFILE = 'bogusrepo'
 
 
 def main(argv: list):

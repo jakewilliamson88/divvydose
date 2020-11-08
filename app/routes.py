@@ -98,7 +98,8 @@ def profiles(profile):
         'messages': {
             'github': gh_profile.get('message'),
             'bitbucket': bb_profile.get('error', {}).get('message')
-        }
+        },
+        'watchers': gh_profile.get('watchers', 0)
     }
 
     return jsonify(merged_profile)

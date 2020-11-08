@@ -183,5 +183,6 @@ class Github(Api):
             'topics': {
                 'list': list(topic_list),
                 'count': dict(topic_counts)
-            }
+            },
+            'watchers': watchers
         }
